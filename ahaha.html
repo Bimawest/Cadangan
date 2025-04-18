@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Welcome to Coffee Shop, your go-to place for the best coffee in town. Explore our wide range of coffee blends and enjoy a unique coffee experience." />
+    <meta name="keywords"
+        content="coffee, coffee shop, latte, butterscotch, taro latte, pandan coffee, mango yakult, nuttela blend" />
+    <meta name="author" content="BimaTech" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Coffee Shop</title>
+    <title>Coffee Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    .navigation {
+    position: relative;
+    display: flex;
+    margin-top: 100px;
+    width: 100%;
+    height: 80px;
+    background-image: url('img/papan.jpeg'); /* Contoh background */
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.navigation ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Efek transisi untuk tinggi ikon */
+    z-index: 1;
+}
+
+.navigation ul li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white; /* Contoh warna teks */
+    transition: color 0.3s ease-in-out; /* Transisi warna teks */
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+.navigation ul li a .icon {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 5px;
+    transition: font-size 0.3s ease-in-out; /* Efek transisi untuk ukuran ikon */
+}
+
+.navigation ul li a .text {
+    font-size: 0.8em;
+}
+
+.indicator {
+    position: absolute;
+    display: flex;
+    width: 60px; /* Sesuaikan lebar indicator */
+    height: 60px;
+    background-image: url('img/kopi.jpg'); /* Contoh warna indicator */
+    background-size: cover;
+    border-radius: 50%;
+    transition: left 0.3s ease-in-out; /* Animasi pergerakan indicator */
+}
+
+/* Styling awal untuk ikon drink lebih tinggi */
+.navigation ul li#drink {
+    transform: translateY(-10px); /* Contoh nilai ketinggian */
+}
+
+/* Hover pada item food */
+.navigation ul li#food-item:hover ~ .indicator {
+    left: calc(20px + 80px); /* Sesuaikan dengan margin dan lebar item */
+}
+
+.navigation ul li#food-item:hover {
+    transform: translateY(-10px); /* Contoh nilai ketinggian saat hover */
+}
+
+.navigation ul li#food-item:hover a {
+    color: #007bff; /* Contoh warna teks saat hover */
+}
+
+.navigation ul li#food-item:hover a .icon {
+    font-size: 1.8em; /* Contoh ukuran ikon saat hover */
+}
+
+/* Kembalikan ketinggian ikon drink saat ikon food di-hover */
+.navigation ul li#food-item:hover ~ ul li#drink {
+    transform: translateY(0);
+}
+
+/* Hover pada item drink (opsional, untuk interaksi visual) */
+.navigation ul li#drink:hover {
+    transform: translateY(-15px); /* Efek hover tambahan untuk drink */
+}
+
+.navigation ul li#drink:hover ~ .indicator {
+    left: 20px; /* Pastikan indicator kembali ke posisi drink saat drink di-hover */
+}
+
+.navigation ul li#drink:hover a {
+    color: #007bff; /* Contoh warna teks saat hover */
+}
+
+.navigation ul li#drink:hover a .icon {
+    font-size: 1.8em; /* Contoh ukuran ikon saat hover */
+}
+</style>
+<body>
+  <div class="navigation">
+    <ul>
+        <li class="list active" id="drink">
+          <a href="ahaha.html">
+            <span class="icon">
+                    <ion-icon name="cafe"></ion-icon>
+                </span>
+                <span class="text">drink</span>
+            </a>
+        </li>
+        <li class="list" id="food-item">
+          <a href="Sementara.html">
+            <span class="icon">
+                    <ion-icon name="restaurant"></ion-icon>
+                </span>
+                <span class="text">food</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</div>
+        
+</body>
+</html>
